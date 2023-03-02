@@ -3,8 +3,8 @@
 @section('content')
     <!-- Bootstrap CSS -->
 
-    
-    
+
+
 
 
 
@@ -39,7 +39,22 @@
         </div>
 
     </div>
+    <style>
+        .dataTables_paginate a {
+            margin: 7px !important;
+            cursor: pointer;
+        }
 
+        .dataTables_filter {
+            margin-top: 20px;
+        }
+
+        .dataTables_filter input {
+            margin-left: 10px
+        }
+
+       
+    </style>
     <!-- Bootstrap Bundle with Popper -->
 @endsection
 @section('scripts')
@@ -47,7 +62,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    
+
     <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
     <script src="{{ asset('js/pages/crud/forms/widgets/bootstrap-datepicker.js') }}"></script>
     <script>
@@ -107,11 +122,12 @@
 @endsection
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
+    <div class="modal-dialog  modal-lg">
         <div class="modal-content">
             <div class="modal-header">
 
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-window-close" aria-hidden="true"></i>
+                </button>
             </div>
             <div class="modal-body">
                 <div class="container" id="modal_case_view">

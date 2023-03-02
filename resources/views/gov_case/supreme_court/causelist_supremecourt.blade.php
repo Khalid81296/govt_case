@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css" rel="stylesheet" />
+    
     <div class="card card-custom">
         <div class="card-title">
             <h3 class="card-title h2 font-weight-bolder text-center mt-2">{{ $page_title }}</h3>
@@ -13,25 +14,28 @@
                 <div class="col">
                     <div class="row mt-5">
 
-                        <div class="col-md-4"> <label for="exampleFormControlInput1"
+                        <div class="col-md-4 text-center"> <label for="exampleFormControlInput1"
                                 class="form-label"><b>Division</b></label>
+                                <br>
                             <select class="form-select required1" name="division_id" id="division_id" required>
                                 <option value="">- Select -</option>
                                 <option value="1">Appellate Division</option>
                                 <option value="2">High Court Division</option>
                             </select>
                         </div>
-                        <div class="col-md-4"><label for="exampleFormControlInput1" class="form-label"><b>Court
+                        <div class="col-md-4 text-center"><label for="exampleFormControlInput1" class="form-label"><b>Court
                                     No</b></label>
+                                    <br>
                             <select class="form-select required1" name="court_no" id="court_no" required>
                                 <option value="">- Select -</option>
                             </select>
                         </div>
-                        <div class="col-md-4"><label for="exampleFormControlInput1" class="form-label"><b>Date</b></label>
-                            <input type="text" class="form-control required" name="case_date" id="case_date"
+                        <div class="col-md-4 text-center"><label for="exampleFormControlInput1" class="form-label"><b>Date</b></label>
+                            <br>
+                            <input type="text" class="required1" name="case_date" id="case_date"
                                 placeholder="" value="{{ date('d/m/y') }}" required>
                         </div>
-                        <div class="col-md-4"><button class="btn btn-primary mt-4"
+                        <div class="col-md-4 mt-3 " style="margin-left: 107px !important"><button class="btn btn-primary mt-4"
                                 id="suprime_court_case_search_button">Search</button></div>
                     </div>
                 </div>
@@ -45,7 +49,13 @@
 
     </div>
 
-   
+    <style>
+        #select2-court_no-container
+        {
+            line-height: 12px !important;
+        }
+    </style>
+
 @endsection
 
 @section('scripts')
