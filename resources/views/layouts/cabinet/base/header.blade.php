@@ -21,6 +21,9 @@
          ->get();
     // dd($case_status);
     $notification_count = 0;
+      
+    
+
 
 @endphp
 @forelse ($case_status as $row)

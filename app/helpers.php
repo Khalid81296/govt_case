@@ -76,6 +76,14 @@ if (!function_exists('en2bn')) {
 	}
 }
 
+if (!function_exists('bn2en')) {
+	function bn2en($item) {
+		return App\Http\Controllers\CommonController::bn2en($item);
+		// echo $item;
+	}
+}
+
+
 if (!function_exists('case_status')) {
 	function case_status($item) {
 		if($item == 1){

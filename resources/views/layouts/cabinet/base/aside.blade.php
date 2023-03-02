@@ -199,7 +199,51 @@
                    </div>
                </li>
             @endif
-
+           @php 
+           
+           
+           $supremeCourtCaseCout=DB::select( DB::raw("SELECT count(*) as total_hearing FROM gov_case_notify_supre_court WHERE date = '27/02/23'") )[0]->total_hearing;
+           
+           @endphp
+            @if(Auth::user()->role_id != 17 && Auth::user()->role_id != 18 && Auth::user()->role_id != 19 && Auth::user()->role_id != 20)
+            <li class="menu-item {{ request()->is('search/supremecourt/causelist', 'show/notification/supremecourt', 'show/notification/supremecourt') ? 'menu-item-open' : '' }}" aria-haspopup="true" data-menu-toggle="hover">
+                <a href="javascript:;" class="menu-link menu-toggle">
+                   <span class="menu-text font-weight-bolder"><i class="fas fa-file-contract"></i> সুপ্রীম কোর্ট</span>
+                    @if($supremeCourtCaseCout !=0)
+                    <span class="menu-label">
+                        <span class="label label-rounded label-danger">{{ $supremeCourtCaseCout }}</span>
+                    </span>
+                    @endif
+                   <i class="menu-arrow"></i>
+                </a>
+                <div class="menu-submenu">
+                   <i class="menu-arrow"></i>
+                   <ul class="menu-subnav">
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="{{ url('search/supremecourt/case') }}" class="menu-link">
+                           <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                           <span class="menu-text font-weight-bolder">মামলা অনুসন্ধান</span>
+                        </a>
+                     </li>
+                    
+                    <li class="menu-item" aria-haspopup="true">
+                        <a href="{{ url('search/supremecourt/causelist') }}" class="menu-link">
+                           <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                           <span class="menu-text font-weight-bolder">কজলিস্ট</span>
+                        </a>
+                     </li>
+                     @if ($supremeCourtCaseCout != 0)
+                      <li class="menu-item" aria-haspopup="true">
+                         <a href="{{ url('show/notification/supremecourt') }}" class="menu-link">
+                            <i class="menu-bullet menu-bullet-dot"><span></span></i>
+                            <span class="menu-text font-weight-bolder">আজকের শুনানির তালিকা</span>
+                         </a>
+                      </li>
+                      @endif
+                   </ul>
+                </div>
+            </li>
+         @endif
             
 
          </ul> <!--end::Menu Nav-->

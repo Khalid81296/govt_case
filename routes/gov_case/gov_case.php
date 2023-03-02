@@ -1,19 +1,40 @@
 <?php
 
-use App\Http\Controllers\gov_case\GovCaseActionController;
-use App\Http\Controllers\gov_case\GovCaseUserNotificationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RM_CaseActionController;
-use App\Http\Controllers\gov_case\GovCaseRegisterController;
-use App\Http\Controllers\gov_case\GovCaseUserManagementController;
+use App\Http\Controllers\gov_case\SumpremCourtController;
+use App\Http\Controllers\gov_case\GovCaseActionController;
 use App\Http\Controllers\gov_case\GovCaseOfficeController;
 use App\Http\Controllers\gov_case\GovCaseMessageController;
+use App\Http\Controllers\gov_case\GovCaseRegisterController;
+use App\Http\Controllers\gov_case\GovCaseUserManagementController;
+use App\Http\Controllers\gov_case\GovCaseUserNotificationController;
 
 Route::middleware('auth')->group(function () {
 
+   /////************** Supream Court **************/////
+
+    Route::get('/search/supremecourt/case', [SumpremCourtController::class, 'search_case']);
+    Route::post('/search/supremecourt/case/post/value', [SumpremCourtController::class, 'search_case_post_function'])->name('supremecourt.case.search.post.value');
+    
+    Route::get('/search/supremecourt/causelist', [SumpremCourtController::class, 'supremecourt_causelist']);
+    
+    Route::post('/search/supremecourt/cause/list', [SumpremCourtController::class, 'supremecourt_causelist_pull_data'])->name('supremecourt.cause.list.pull.data');
+    
+    //Route::get('/get/notification/supremecourt', [SumpremCourtController::class, 'supremecourt_get_notification']);
+    
+    Route::get('/show/notification/supremecourt', [SumpremCourtController::class, 'supremecourt_show_notification'])->name('show.notification.supremecourt');
+    
+    Route::get('/modal/case/details/view', [SumpremCourtController::class, 'modal_case_details_view'])->name('modal.case.details.view');
+    
+
+
     Route::group(['prefix' => 'cabinet/', 'as' => 'cabinet.'], function () {
         Route::resource('user-management', GovCaseUserManagementController::class);
+
+
         /////************** Office Setting **************/////
+
         Route::get('/office', [GovCaseOfficeController::class, 'index'])->name('office');
         Route::get('/office/level/{level}', [GovCaseOfficeController::class, 'level_wise'])->name('office.level');
         Route::get('/office/parent/{parent}', [GovCaseOfficeController::class, 'parent_wise'])->name('office.parent');

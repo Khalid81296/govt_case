@@ -1,7 +1,7 @@
 <?php return array (
   'app' => 
   array (
-    'name' => 'GovCase',
+    'name' => 'civilsuit',
     'env' => 'local',
     'debug' => true,
     'url' => 'http://localhost',
@@ -184,7 +184,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\framework/cache/data',
+        'path' => 'C:\\xampp\\htdocs\\govt_case\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -224,7 +224,7 @@
         'endpoint' => NULL,
       ),
     ),
-    'prefix' => 'govcase_cache',
+    'prefix' => 'civilsuit_cache',
   ),
   'cors' => 
   array (
@@ -263,7 +263,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'cabinet_case',
+        'database' => 'gov_case',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -273,9 +273,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'cabinet_case',
+        'database' => 'gov_case',
         'username' => 'root',
-        'password' => '',
+        'password' => 'password',
         'unix_socket' => '',
         'charset' => 'utf8mb4',
         'collation' => 'utf8mb4_unicode_ci',
@@ -293,9 +293,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'cabinet_case',
+        'database' => 'gov_case',
         'username' => 'root',
-        'password' => '',
+        'password' => 'password',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -308,9 +308,9 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'cabinet_case',
+        'database' => 'gov_case',
         'username' => 'root',
-        'password' => '',
+        'password' => 'password',
         'charset' => 'utf8',
         'prefix' => '',
         'prefix_indexes' => true,
@@ -323,7 +323,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'govcase_database_',
+        'prefix' => 'civilsuit_database_',
       ),
       'default' => 
       array (
@@ -351,12 +351,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\app',
+        'root' => 'C:\\xampp\\htdocs\\govt_case\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\app/public',
+        'root' => 'C:\\xampp\\htdocs\\govt_case\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -373,7 +373,7 @@
     ),
     'links' => 
     array (
-      'F:\\xampp\\htdocs\\cabinet_case\\public\\storage' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\app/public',
+      'C:\\xampp\\htdocs\\govt_case\\public\\storage' => 'C:\\xampp\\htdocs\\govt_case\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -407,13 +407,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\govt_case\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\govt_case\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -464,7 +464,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\govt_case\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -514,14 +514,14 @@
     'from' => 
     array (
       'address' => NULL,
-      'name' => 'GovCase',
+      'name' => 'civilsuit',
     ),
     'markdown' => 
     array (
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'F:\\xampp\\htdocs\\cabinet_case\\resources\\views/vendor/mail',
+        0 => 'C:\\xampp\\htdocs\\govt_case\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -604,7 +604,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\framework/sessions',
+    'files' => 'C:\\xampp\\htdocs\\govt_case\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -613,7 +613,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'govcase_session',
+    'cookie' => 'civilsuit_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,
@@ -624,9 +624,9 @@
   array (
     'paths' => 
     array (
-      0 => 'F:\\xampp\\htdocs\\cabinet_case\\resources\\views',
+      0 => 'C:\\xampp\\htdocs\\govt_case\\resources\\views',
     ),
-    'compiled' => 'F:\\xampp\\htdocs\\cabinet_case\\storage\\framework\\views',
+    'compiled' => 'C:\\xampp\\htdocs\\govt_case\\storage\\framework\\views',
   ),
   'flare' => 
   array (
