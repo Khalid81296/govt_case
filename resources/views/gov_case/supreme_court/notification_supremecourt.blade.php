@@ -20,7 +20,7 @@
                 <div class="col-md-4">
                     <div class="row">
                         <div class="col-md-8"> <label for="exampleFormControlInput1" class="form-label"><b>Date</b></label>
-                            <input type="text" class="form-control required common_datepicker" name="case_date"
+                            <input type="text" class="form-control required common_datepicker" autocomplete="off" name="case_date"
                                 id="case_date" placeholder="" value="{{ $date }}">
                         </div>
                         <div class="col-md-4"><button class="btn btn-primary mt-4"

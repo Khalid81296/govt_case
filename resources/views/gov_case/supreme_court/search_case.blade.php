@@ -217,13 +217,13 @@
                         if (response.success == 'success') {
                             //$('#search_result_supream_court').empty();
                             $('#search_result_supream_court').html(response.html)
-                            var ahref = $('a').attr('href');
+                            var ahref = $('#search_result_supream_court a').attr('href');
                             if (ahref != undefined) {
 
                                 var Nhref = 'https://supremecourt.gov.bd/web/' + ahref.replace('../',
                                     '');;
-                                $('a').attr("href", Nhref);
-                                $('a').addClass('text-decoration-none');
+                                $('#search_result_supream_court a').attr("href", Nhref);
+                                $('#search_result_supream_court a').addClass('text-decoration-none');
                             }
                         }
                     }
@@ -255,12 +255,12 @@
         //             if (response.success == 'success') {
         //                 //$('#search_result_supream_court').empty();
         //                 $('#search_result_supream_court').html(response.html)
-        //                 var ahref = $('a').attr('href');
+        //                 var ahref = $('#search_result_supream_court a').attr('href');
         //                 if (ahref != undefined) {
 
         //                     var Nhref = 'https://supremecourt.gov.bd/web/' + ahref.replace('../', '');;
-        //                     $('a').attr("href", Nhref);
-        //                     $('a').addClass('text-decoration-none');
+        //                     $('#search_result_supream_court a').attr("href", Nhref);
+        //                     $('#search_result_supream_court a').addClass('text-decoration-none');
         //                 }
         //             }
         //         }

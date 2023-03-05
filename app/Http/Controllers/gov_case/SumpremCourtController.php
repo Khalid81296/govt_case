@@ -165,15 +165,15 @@ class SumpremCourtController extends Controller
     {
         if(!empty($request->date))
         {
-            $exploded_date=explode('/',$request->date);
-            $date_year=$exploded_date[2]; //substr($str, 4);
+            // $exploded_date=explode('/',$request->date);
+            // $date_year=$exploded_date[2]; //substr($str, 4);
             
-            $date=$exploded_date[0].'/'.$exploded_date[1].'/'.substr($date_year, 2);
+            $date=$request->date;
 
         }
         else
         {
-            $date='27/02/23';  
+            $date='27/02/2023';  
         }
         
         $all_case = DB::table('gov_case_notify_supre_court')->where('date', $date)->get();

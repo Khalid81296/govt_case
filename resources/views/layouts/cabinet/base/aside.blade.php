@@ -202,7 +202,7 @@
            @php 
            
            
-           $supremeCourtCaseCout=DB::select( DB::raw("SELECT count(id) as total_hearing FROM gov_case_notify_supre_court WHERE date = '27/02/23'") )[0]->total_hearing;
+           $supremeCourtCaseCout=DB::select( DB::raw("SELECT count(id) as total_hearing FROM gov_case_notify_supre_court WHERE date = '27/02/2023'") )[0]->total_hearing;
            
            @endphp
             @if(Auth::user()->role_id != 17 && Auth::user()->role_id != 18 && Auth::user()->role_id != 19 && Auth::user()->role_id != 20)
